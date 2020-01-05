@@ -76,3 +76,10 @@
 #result-btn:hover {
   transform: translate(-50%, -50%) translateY(300px) scale(1.2);
 }
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
