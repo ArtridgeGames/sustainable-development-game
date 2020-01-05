@@ -86,3 +86,10 @@ body {
   -ms-transition: none !important;
   transition: none !important;
 }
+#score {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: white;
+  font-family: "Roboto";
+}
