@@ -67,7 +67,9 @@ resultBtn.onclick = function() {
     window.setTimeout(function() {
       object.classList.add("no-transition");
       object.style.top = "-10%";
-      askObject();
-    }, 300)
-  }, 300)
+      window.setTimeout(function() {
+        askObject();
+      }, 300);
+    }, 300);
+  }, 300);
 }
