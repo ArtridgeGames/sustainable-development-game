@@ -42,9 +42,9 @@
   color: white;
   transition: top 0.3s ease-in-out;
 }
-#result {
-  font-size: 100px;
-  margin: auto;
+#result-icon {
+  font-size: 300px;
+  margin: 0 auto;
 }
 #result-container {
   position: absolute;
