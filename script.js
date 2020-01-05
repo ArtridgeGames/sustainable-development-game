@@ -69,7 +69,7 @@ resultBtn.onclick = function() {
       object.style.top = "-10%";
       window.setTimeout(function() {
         askObject();
-      }, 300);
+      }, 200);
     }, 300);
   }, 300);
 }
