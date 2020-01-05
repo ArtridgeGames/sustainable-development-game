@@ -63,5 +63,16 @@
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%) translateY(-300px);
+  transform: translate(-50%, -50%) translateY(300px);
+  background-color: #428bca;
+  padding: 13px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 45px;
+  font-family: "Roboto";
+  color: white;
+  transition: all 1s;
+}
+#result-btn:hover {
+  transform: scale(1.3);
 }
