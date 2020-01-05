@@ -76,7 +76,7 @@
 #result-btn:hover {
   transform: translate(-50%, -50%) translateY(300px) scale(1.2);
 }
-.notransition {
+.no-transition {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -o-transition: none !important;
