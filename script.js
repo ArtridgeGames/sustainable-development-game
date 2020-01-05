@@ -1,3 +1,4 @@
+/*** Liste d'objets (le script s'adapte automatiquement lors de l'ajout d'elements) ***/
 var objects = [
   {
     name: "Objet 1",
@@ -17,6 +18,7 @@ var objects = [
   }
 ]
 
+/*** Initialisation des références HTML ***/
 var leftBtn = document.getElementById("left");
 var rightBtn = document.getElementById("right");
 var object = document.getElementById("object");
@@ -25,10 +27,12 @@ var resultContainer = document.getElementById("result-container");
 var resultBtn = document.getElementById("result-btn");
 var scoreDisplay = document.getElementById("score");
 
+/*** Initialisation des variables ***/
 var score = 0;
 var obj = undefined;
 var canAnswer = false;
 
+/*** Fonction pour redemander un objet ***/
 function askObject() {
   canAnswer = true;
   obj = objects[Math.floor(Math.random() * objects.length)]
@@ -37,10 +41,12 @@ function askObject() {
   object.style.top = "40%";
 }
 
+/*** Demander un objet quand la page se charge ***/
 window.onload = function() {
   askObject();
 }
 
+/*** Fonctions attribuées aux clicks ***/
 leftBtn.onclick = function() {
   click(true);
 }
@@ -48,6 +54,7 @@ rightBtn.onclick = function() {
   click(false);
 }
 
+/*** Vérification de la réponse et animation du résultat ***/
 function click(chosenOption) {
   if (canAnswer) {
     canAnswer = false;
