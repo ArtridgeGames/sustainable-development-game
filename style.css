@@ -7,10 +7,15 @@
 }
 #left {
   background-color: green;
+  position: absolute;
+  top: 0%;
+  left: 0%;
 }
 #right {
   background-color: red;
-  float: right;
+  position: absolute;
+  top: 0%;
+  right: 0%;
 }
 .label {
   margin: auto;
