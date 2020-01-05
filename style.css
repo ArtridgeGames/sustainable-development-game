@@ -1,1 +1,17 @@
-
+.option {
+  width: 50vw;
+  height: 100vw;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#left {
+  background-color: green;
+}
+#right {
+  background-color: red;
+  float: right;
+}
+.label {
+  margin: auto;
+}
