@@ -75,6 +75,7 @@ body {
   font-family: "Roboto";
   color: white;
   transition: all 0.2s;
+  border: none;
 }
 #result-btn:hover {
   transform: translate(-50%, -50%) translateY(300px) scale(1.2);
