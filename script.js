@@ -20,6 +20,9 @@ var objects = [
 var leftBtn = document.getElementById("left");
 var rightBtn = document.getElementById("right");
 var object = document.getElementById("object");
+var result = document.getElementById("result");
+var result = document.getElementById("result-container");
+
 var obj = undefined;
 function askObject() {
   obj = objects[Math.floor(Math.random() * objects.length)]
@@ -40,8 +43,8 @@ rightBtn.onclick = function() {
 
 function click(chosenOption) {
   if (chosenOption == obj.recyclable) {
-    // correct
+    result.setAttribute("class", "fas fa-check");
   } else {
-    // incorrect
+    result.setAttribute("class", "fas fa-times");
   }
 }
