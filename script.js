@@ -31,7 +31,7 @@ function askObject() {
   canAnswer = true;
   obj = objects[Math.floor(Math.random() * objects.length)]
   object.innerHTML = obj.name;
-  object.style.transition = "top 0.3s ease-in-out";
+  object.classList.remove("no-transition");
   object.style.top = "40%";
 }
 
@@ -65,7 +65,7 @@ resultBtn.onclick = function() {
   window.setTimeout(function() {
     object.style.top = "110%";
     window.setTimeout(function() {
-      object.style.transition = "";
+      object.classList.add("no-transition");
       object.style.top = "-10%";
       askObject();
     }, 300)
