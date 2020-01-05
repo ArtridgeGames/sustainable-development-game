@@ -66,10 +66,8 @@ resultBtn.onclick = function() {
     object.style.top = "110%";
     window.setTimeout(function() {
       object.style.transition = "";
-      object.style.top = "40%";
-      window.setTimeout(function() {
-        askObject();
-      }, 300)
+      object.style.top = "-10%";
+      askObject();
     }, 300)
   }, 300)
 }
