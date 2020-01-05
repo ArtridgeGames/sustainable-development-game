@@ -23,7 +23,9 @@ var object = document.getElementById("object");
 var resultIcon = document.getElementById("result-icon");
 var resultContainer = document.getElementById("result-container");
 var resultBtn = document.getElementById("result-btn");
+var scoreDisplay = document.getElementById("score");
 
+var score = 0;
 var obj = undefined;
 var canAnswer = false;
 
@@ -51,12 +53,17 @@ function click(chosenOption) {
     canAnswer = false;
     resultContainer.style.transform = "scale(1)";
     if (chosenOption == obj.recyclable) {
+      // correct
+      score += 1;
       resultIcon.setAttribute("class", "fas fa-check");
       resultIcon.style.color = "#5cb85c";
     } else {
+      // incorrect
+      score -= 1;
       resultIcon.setAttribute("class", "fas fa-times");
       resultIcon.style.color = "#d9534f";
     }
+    scoreDisplay.innerHTML = score;
   }
 }
 
