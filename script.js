@@ -25,9 +25,13 @@ var resultContainer = document.getElementById("result-container");
 var resultBtn = document.getElementById("result-btn");
 
 var obj = undefined;
+var canAnswer = false;
+
 function askObject() {
+  canAnswer = true;
   obj = objects[Math.floor(Math.random() * objects.length)]
   object.innerHTML = obj.name;
+  object.style.transition = "top 0.3s ease-in-out";
   object.style.top = "40%";
 }
 
@@ -43,16 +47,27 @@ rightBtn.onclick = function() {
 }
 
 function click(chosenOption) {
-  resultContainer.style.transform = "scale(1)";
-  if (chosenOption == obj.recyclable) {
-    resultIcon.setAttribute("class", "fas fa-check");
-    resultIcon.style.color = "#5cb85c";
-  } else {
-    resultIcon.setAttribute("class", "fas fa-times");
-    resultIcon.style.color = "#d9534f";
+  if (canAnswer) {
+    canAnswer = false;
+    resultContainer.style.transform = "scale(1)";
+    if (chosenOption == obj.recyclable) {
+      resultIcon.setAttribute("class", "fas fa-check");
+      resultIcon.style.color = "#5cb85c";
+    } else {
+      resultIcon.setAttribute("class", "fas fa-times");
+      resultIcon.style.color = "#d9534f";
+    }
   }
 }
 
 resultBtn.onclick = function() {
   resultContainer.style.transform = "scale(0)";
+  window.setTimeout(function() {
+    object.style.top = "110%";
+    window.setTimout = function() {
+      object.style.transition = "";
+      object.style.top = "40%";
+      askObject();
+    }, 300)
+  }, 300)
 }
