@@ -24,7 +24,7 @@ var object = document.getElementById("object");
 function askObject() {
   var obj = objects[Math.floor(Math.random() * objects.length)]
   object.innerHTML = obj.name;
-  object.style.top = "50%";
+  object.style.top = "40%";
 }
 
 window.onload = function() {
