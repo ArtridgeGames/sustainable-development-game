@@ -20,4 +20,6 @@
 .label {
   margin: auto;
   color: white;
+  text-transform: uppercase;
+  font-size: 32px;
 }
