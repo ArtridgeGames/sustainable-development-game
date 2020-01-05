@@ -42,3 +42,15 @@
   color: white;
   transition: top 0.3s ease-in-out;
 }
+#result {
+  font-size: 100px;
+  margin: auto;
+}
+#result-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000099;
+}
