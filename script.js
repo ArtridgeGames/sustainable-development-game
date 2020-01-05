@@ -20,7 +20,7 @@ var objects = [
 var leftBtn = document.getElementById("left");
 var rightBtn = document.getElementById("right");
 var object = document.getElementById("object");
-var result = document.getElementById("result");
+var resultIcon = document.getElementById("result-icon");
 var resultContainer = document.getElementById("result-container");
 
 var obj = undefined;
@@ -43,12 +43,12 @@ rightBtn.onclick = function() {
 
 function click(chosenOption) {
   if (chosenOption == obj.recyclable) {
-    result.setAttribute("class", "fas fa-check");
-    result.style.color = "#5cb85c";
+    resultIcon.setAttribute("class", "fas fa-check");
+    resultIcon.style.color = "#5cb85c";
     resultContainer.style.transform = "scale(1)";
   } else {
-    result.setAttribute("class", "fas fa-times");
-    result.style.color = "#d9534f";
+    resultIcon.setAttribute("class", "fas fa-times");
+    resultIcon.style.color = "#d9534f";
     resultContainer.style.transform = "scale(1)";
   }
 }
